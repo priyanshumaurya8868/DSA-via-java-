@@ -8,10 +8,11 @@ void e();
 }
 //Creating abstract class that provides the implementation of one method of A interface  
 abstract class B implements A{
-	public void a() {
+	public void a()
+	{
 		System.out.println("hi I'm a");
 	}
-	//yha nhi tho inche pr sbke kahi na kahi na body deni hogi
+	//yha nhi tho inche, pr sbke kahi na kahi na body deni hogi
 }
 //Creating subclass of abstract class, now we need to provide the implementation of rest of the methods  
 class C extends B{

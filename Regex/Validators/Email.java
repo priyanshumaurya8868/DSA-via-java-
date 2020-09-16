@@ -1,41 +1,29 @@
 package Regex.Validators;
-import java.util.*;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-class emailUtil{
-	String regex ;
-	List <String> emails =new ArrayList<>();
-	emailUtil(){
-		regex= "^[a-zA-Z0-9-\\+]+"   //=> madatory  => avoid the ocurrence of .(dot) at 1st place  => + sign
-				      +
-				"(\\.[a-zA-Z0-9-])*"// => .(dot) optional ,
-				       +
-				  "@" // => mandatory
-				    +
-			  "[a-zA-Z0-9-]+" // => domain name => avoiding early(or direct) dot interaction just after @ 
-				     +
-				     "(\\.[a-zA-Z0-9])*" // => pre-extention  (optional)=>  no - sign after .(dot) 
-				     +
-				     "(\\.[A-Za-z]{2,})";//  => post extention (mandatory) => no 0-9 range,-,+ 
-	}
-	public  void print() {
-		 for(String email : emails) {
-			 System.out.println(email+" : "+Pattern.matches(regex, email));
-		 } System.out.println();
-	}
-}
-public class Email {
 
+
+public class Email{
 	public static void main(String[] args) {
-	
-emailUtil e = new emailUtil();
-e.emails.add("priyanshumaurya.8868@gmail.com");//true
-e.emails.add("priyanshumaurya.8868@redKit.com.au");//true
-e.emails.add(".nallaAdmi@gmail.com");//false
-e.emails.add("mkyong@%*.com");//false
-
-		e.print();
+		Scanner sc = new Scanner(System.in);
+		String regex = "^" //start
+				+ "[a-zA-Z0-9]" // restricting the 1st character to alpha-numeric
+				+"([a-zA-Z0-9]+[\\._\\-]?)*" //  remaining characters //preventing two consecutive dots n other symbols...
+				+ "@"  // mandatory symbol
+				+"[a-zA-Z0-9]+" //domain name
+				+ "([.][a-zA-Z]+)+" //covering .co.in
+				+ "$"; //end
+		while(true) {
+//			 Pattern p = Pattern.compile(regex);
+//			  Matcher m = Pattern.matcher(sc.nextLine());   => error ******************DO CHECK REASON ************************************** 
+			if(Pattern.matches(regex, sc.nextLine()))
+				System.out.println( "=> Valid...!");
+			else System.out.println("=> InValid..!");
+				
+					}
 	}
-
 }
 //ref (for invalid and valid cases) : https://www.regexpal.com/96927
 //ref (intro )                      : https://www.geeksforgeeks.org/write-regular-expressions/

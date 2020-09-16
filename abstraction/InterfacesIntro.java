@@ -41,7 +41,7 @@ public class InterfacesIntro {
 		testInterface t = new testInterface();
 		t.print();
 		t.show();
-		
+
 		// accessing default method
 		printable p = new testInterface();
 	 p.msg();

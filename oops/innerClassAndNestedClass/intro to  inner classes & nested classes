@@ -1,0 +1,36 @@
+ intro ...
+
+ 
+ 
+Java Inner Classes
+Java inner class or nested class is a class which is declared inside the class or interface.
+
+We use inner classes to logically group classes and interfaces in one place so that it can be more readable and maintainable.
+
+Additionally, it can access all the members of outer class including private data members and methods.
+
+Syntax of Inner class
+class Java_Outer_class{  
+ //code  
+ class Java_Inner_class{  
+  //code  
+ }  
+}
+Adavantage :- 
+
+1. access all the members of outer class
+2. to develop more readable and maintainable code.
+3. code optimization : it required less code to write
+
+Difference between nested class and inner class in Java...
+Inner class is a part of nested class. Non-static nested classes are known as inner classes.
+
+Types of Nested classes
+There are two types of nested classes non-static and static nested classes.The non-static nested classes are also known as inner classes.
+
+1. Non-static nested class (inner class)
+1(a). Member inner class
+1(b).Anonymous inner class
+1(c).Local inner class
+
+2. Static nested class

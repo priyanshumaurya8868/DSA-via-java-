@@ -1,5 +1,6 @@
 package array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Average {
@@ -25,7 +26,10 @@ public class Average {
  
       sc.close();
       
-
+       
+       array = Arrays.copyOfRange(array, 0, 2);
+       
+       for(int i : array) System.out.print(i+", ");
 	}
 
 }

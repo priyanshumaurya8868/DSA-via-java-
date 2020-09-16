@@ -97,7 +97,7 @@ public int getAge() {
 
 //way-1 -> step1: 
 class AgeComparator implements Comparator<Student>{  
-	//way-1 -> step3: 
+	//way-1 -> step2: 
 public int compare(Student s1,Student s2){  
 //if(s1.age==s2.age)  
 //return 0;  
@@ -112,7 +112,8 @@ return s1.age-s2.age;
 }  
 //
 //Comparable	Comparator
-//1) Comparable provides a single sorting sequence. In other words, we can sort the collection on the basis of a single element such as id, name, and price.	The Comparator provides multiple sorting sequences. In other words, we can sort the collection on the basis of multiple elements such as id, name, and price etc.
+//1) Comparable provides a single sorting sequence. In other words, we can sort the collection on the basis of a single element such as id, name, and price.	
+//The Comparator provides multiple sorting sequences. In other words, we can sort the collection on the basis of multiple elements such as id, name, and price etc.
 //2) Comparable affects the original class, i.e., the actual class is modified.	Comparator doesn't affect the original class, i.e., the actual class is not modified.
 //3) Comparable provides compareTo() method to sort elements.	Comparator provides compare() method to sort elements.
 //4) Comparable is present in java.lang package.	A Comparator is present in the java.util package.

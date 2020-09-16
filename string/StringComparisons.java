@@ -1,5 +1,7 @@
 package string;
 
+import java.util.Arrays;
+
 public class StringComparisons {
 	public static void main(String[] args) {
 		/******************************************  COMPARITION **********************************************************************************************/
@@ -53,15 +55,18 @@ public class StringComparisons {
 			System.out.println("s1.equalIgnoreCases(s4) : "+s1.equalsIgnoreCase(s4));
 			System.out.println("s1.compareTo(s4) : "+ s1.compareTo(s4)); //lower case have larger value
 			
-			
+			      
 			
 			String s5 ="abc";
 			String s6 = "cba";
 			System.out.println();
 			System.out.println(s5.compareTo(s6));
-					
-			
-	
+					 
+			String se = s5+s6;
+		char[] ch	 = se.toCharArray(); Arrays.sort(ch);
+		
+
+	      
 
 	}
 }

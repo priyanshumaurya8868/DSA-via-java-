@@ -36,7 +36,7 @@ No.	Character Class	Description
 	System.out.println("4(c). "+Pattern.matches("[a-p[q-z]]","z"));//true
 	System.out.println("4(d). "+Pattern.matches("[a-p[q-z]]","az"));//false only char are valid  #multipleOccurrenceOfValidCharacters
 	
-// 	   [a-z&&[def]]	d, e, or f (intersection)
+// 	    [a-z&&[def]]	d, e, or f (intersection)
 	System.out.println("5(a). "+Pattern.matches("[a-z&&[def]]", "d"));//true
 	System.out.println("5(b). "+Pattern.matches("[a-z&&[def]]","a"));//false => "a" is not a intersection of [def]
 

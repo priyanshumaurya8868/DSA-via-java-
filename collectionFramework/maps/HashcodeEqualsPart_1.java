@@ -47,6 +47,24 @@ public class HashcodeEqualsPart_1{
  class pen{
 	int price;
 	String colour;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		pen other = (pen) obj;
+		if (colour == null) {
+			if (other.colour != null)
+				return false;
+		} else if (!colour.equals(other.colour))
+			return false;
+		if (price != other.price)
+			return false;
+		return true;
+	}
 	public pen(int x,String s) {
 		price =x;
 		colour = s;

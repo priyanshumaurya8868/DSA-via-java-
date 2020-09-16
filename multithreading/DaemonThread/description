@@ -1,0 +1,30 @@
+Demon thread is a low priority thread runs in a background(or side by side with main thread) to perform task such as garbage collector, 
+OR
+( to provide service to other user thread).
+
+Properties:
+
+ 1.->They can not prevent the JVM from exiting when all the user threads finish their execution.
+ 
+ 2.-> JVM terminates itself when all user threads finish their execution.
+ 
+ 3.-> If JVM finds running daemon thread, it terminates the thread and after that shutdown itself. 
+ JVM does not care whether Daemon thread is running or not.
+ 
+ 4.-> It is an utmost low priority thread.
+
+
+No.	Method	                                -> Description
+1)	public void setDaemon(boolean status)	-> is used to mark the current thread as daemon thread or user thread.
+2)	public boolean isDaemon()	            -> is used to check that current is daemon.
+
+
+Daemon vs User Threads...
+Priority: When the only remaining threads in a process are daemon threads, the interpreter exits. 
+This makes sense because when only daemon threads remain, 
+there is no other thread for which a daemon thread can provide a service.
+
+Usage: Daemon thread is to provide services to user thread for background supporting task.
+
+
+Note: If you want to make a user thread as Daemon, it must not be started otherwise it will throw IllegalThreadStateException.

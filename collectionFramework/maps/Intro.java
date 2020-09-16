@@ -1,3 +1,4 @@
+
 package collectionFramework.maps;
 import java.util.*;
 import java.util.Map.Entry;
@@ -19,7 +20,7 @@ public class Intro {
 	/* METHODS OF MAPS
 	 *  For Insertion : put(K,V),putAll(map) , putIfAbseent(K,V),
 	 *  for Accessing : get(K),getOrDefault(K,defaultValue)  -> returns value of key, if not present then return defaultValue
-	 *  boolean value : containKey(K),containValue(V)
+	 *  boolean value : containsKey(K),containsValue(V)
 	 *  updating value: replace(K,newValue)-> replace the value of k, replace(K,old value,new value) ->replace the value of k only if k is associated with old value
 	 *  removing value: remove(K),remove(K,V)-:remove K if is associated with value V
 	 */
@@ -51,7 +52,7 @@ Map <Character,String> m1 = new HashMap<Character, String>();
 
 m1.put('a',"Apple");
 m1.put('b',"Banana" );
-m1.put('c',"Cat");
+m1.put('c',"Cat"); 
 
 m1.putAll(m2); // both object should be of same  type
 System.out.println("m1 : "+m1);
@@ -94,11 +95,7 @@ for(Entry<String,Integer> e : entry) {
 	e.setValue(e.getValue()*100);
 }
 System.out.println("new modified m : "+m);
-
-
-
-
-		
+	
 	}
 
 }

@@ -13,8 +13,6 @@ public static void main(String[] args) {
 	p.getDiscription();
 	
 	// but if u want their instance member variable to be initialized with a specific type of data then use wrapper classes in angular bracket (i.e. <>)
-	
-	
-	
+
 }
 }
